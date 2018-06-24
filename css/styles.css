@@ -44,7 +44,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   color: #aaa;
   font-size: 8pt;
   letter-spacing: 1px;
-  padding: 25px;
+  padding: 25px 0;
   text-align: center;
   text-transform: uppercase;
 }
@@ -321,9 +321,11 @@ nav h1 a {
   }
 }
 
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 601px) {
   #reviews-container, #restaurant-container {
-    max-width: 100%;
+	  width: 100%;
+	  margin-left: auto;
+	  margin-right: auto;
   }
   #reviews-list li {
     width: 100%;
