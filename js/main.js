@@ -1,3 +1,31 @@
+/**
+ * Register the service worker
+ */
+if('serviceWorker' in navigator) // check first browser supports SW
+{
+    navigator.serviceWorker.register('./js/sw.js')
+    .then(function(reg)
+    {
+        if(reg.installing)
+        {
+            console.log('Service worker is installing');
+        }
+        else if(reg.waiting)
+        {
+            console.log('Service worker is installed');
+        }
+        else if(reg.active)
+        {
+            console.log('Service worker active');
+        }
+    })
+    .catch(function(error)
+    {
+        console.log('Registration failed with error: ' + error);
+    })
+}
+
+
 let restaurants,
   neighborhoods,
   cuisines
